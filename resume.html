@@ -1,0 +1,631 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Kevin Liu</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="bb2c1f96-e709-4403-a410-c7944eefb889" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">👨‍💻</span></div><h1 class="page-title">Kevin Liu</h1></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8bd5f6f5-99c9-423d-9ba1-8e9590dcf96f"><div style="font-size:1.5em"><span class="icon">👨‍💻</span></div><div style="width:100%">I&#x27;m a 15 year-old Innovator at The Knowledge Society, an Olympic-level STEM incubator where I&#x27;m focused on developing a legendary skillset to impact millions if not billions in the years and decades to come! 
+
+My current focuses lie in Artificial Intelligence, Self Driving Cars, Programming, Project Management, Event Planning and more! My life mission is to enable universal education, healthcare and wellbeing for all leveraging emerging technologies.</div></figure><div id="2df25e01-4501-4208-be1f-b67cbe6b26f3" class="column-list"><div id="94836300-97a8-4be6-82ff-65f243a96f46" style="width:33.33333333333333%" class="column"><h1 id="7d18e064-4c4b-4d79-8b2d-93b5d5a692ea" class="">☎️ Contact Information</h1><p id="ced04797-abb4-4642-94cf-46a317b42960" class="">📞 (647) 983-3658</p><p id="b22d4174-30ce-4869-8617-c063723837e2" class="">✉️ hello@kevinliu.tech</p><hr id="540e5c06-0336-42af-ab90-1e4bcf62b256"/><p id="ff40011c-fd6c-4472-9ccb-fd8e74ed4d56" class="">👨‍💻 <a href="http://www.kevinliu.tech">Website</a></p><p id="00c75903-ef42-40e3-8d41-5c13d11074dd" class="">👋 <a href="https://www.linkedin.com/in/kevin-liu-tech/">Linkedin</a></p><p id="7117eb0e-1882-412e-aee9-ac15a3cbe8a3" class="">👨‍💻 <a href="https://www.github.com/kevin-liu-tech">Github</a></p><p id="11227bd6-6393-4823-b7a6-b96d64dab25e" class="">🎬 <a href="https://www.youtube.com/channel/UCZCFIJ3qaeorDw4dwD9WEGA?view_as=subscriber">Youtube</a></p><p id="d8ebf306-012f-494f-b138-32dc9450e8d2" class="">📝 <a href="http://medium.com/@kevin.liu.tech">Medium</a></p></div><div id="cbafaae1-3620-4d69-874f-87eba4447a48" style="width:33.33333333333333%" class="column"><h1 id="99c93738-c613-4e28-a5c6-74a7f990e498" class="">🛠 Skills</h1><p id="a6d5d26d-4f30-402c-8fe3-72c151b16fbe" class="">Programming</p><ul id="eb60f9c6-87cc-4019-8c51-33d20ea039dd" class="bulleted-list"><li>Web, Python, Java</li></ul><p id="379cc136-876b-449d-bbd3-99f0db1ae2f4" class="">Adobe Creative Suite</p><p id="dd53902c-af96-4e35-9cca-b7a5d73558f2" class="">Microsoft Office &amp; G Suite</p><p id="ea7891a1-dc4b-4aba-9d7c-7ba9599e8ba2" class="">Project Management</p><p id="d418d75d-f466-4696-a7fc-c4387c4e3f1a" class="">Web Development</p><p id="ab1c3536-b663-4ea9-aec9-d48c755fd2ac" class="">Event Planning</p><p id="dc887b2c-b05f-428e-b091-c4577db45bf7" class="">Content Creation</p></div><div id="4656b31e-d33c-4a2e-a91c-8c82d1c14cdd" style="width:33.33333333333334%" class="column"><h1 id="3137b279-5bd6-4039-b1e2-21312431f2cd" class="">🗣 Languages </h1><p id="ae185953-5e88-4f96-8d66-f6d0bc9dfe68" class=""><strong>🇨🇦 English | Native</strong></p><p id="7c137206-93e0-4ae0-9a07-48bed3b530ed" class=""><strong>🇫🇷 French | Proficient</strong></p><p id="3220886a-80d8-4fae-b7fb-8882b77e5497" class=""><strong>🇨🇳 Mandarin | Native</strong></p><p id="15a0ccea-e108-4f89-a07e-3cd5eaf941fa" class=""><strong>🇨🇳 Fuzhounese | Native</strong></p><p id="dcae3441-0fe9-4efb-9e97-fa6aa99f7df9" class=""><strong>🇨🇳 Cantonese | Limited</strong></p><p id="4674df42-98e1-4ebe-b611-c45f34f375b4" class="">
+</p></div></div><h1 id="003598cd-6034-4980-a15a-383fea0f86ef" class="">📚 Education</h1><h2 id="09e4384b-15d7-4e86-b4bb-3664d0ec0a29" class="">The Knowledge Society</h2><p id="e30d74d1-acd5-4515-a9e3-bb9a56e8b559" class=""><mark class="highlight-gray"><strong><em>Innovator</em></strong></mark><mark class="highlight-gray"><em>, Toronto, Canada – (Sept. 2020 - Present)</em></mark></p><p id="c7837cb2-f32b-44eb-87d5-678e8f9735f6" class="">The Knowledge Society (TKS) is Canada&#x27;s leading incubator program in exploring the world of emerging technologies, entrepreneurship and innovation. The program&#x27;s curriculum is modeled after that of Harvard, MIT, and Stanford University, which replicates learning environments at Google, Apple, and Facebook. It includes next generation topics such as Virtual Reality, Internet of Things, Alternative Energy, and Artificial Intelligence.</p><h2 id="a123b863-9ee8-44fa-bf0b-cc1df4b821f8" class="">Agincourt Collegiate Institute</h2><p id="2fb90a9b-35b3-4673-9118-0da67e99c62f" class=""><mark class="highlight-gray"><strong><em>Grade 11 Student</em></strong></mark><mark class="highlight-gray"><em>, 4.0GPA, Toronto, Canada – (Sept. 2018 - Present)</em></mark></p><p id="0211b5c7-8e75-4933-8e07-b310e2fd937e" class="">Activities: Agincourt Music Council Grade 9 Representative <em>&amp;</em> Grade 10 Media and Technologies Lead, Mentors Council, Content Creator, Concert Choir, Concert Orchestra, Agincourt Singers, Symphony Orchestra</p><hr id="303698d5-a366-49d0-ae72-4fc4d25b36ca"/><h1 id="d73ab152-9fce-4d8a-92c8-713425bf1731" class="">💻 Experience</h1><h1 id="b3891229-f009-4f76-b6a5-2bfa942ab142" class="">Co-Founder</h1><p id="0a4fdb82-f698-434b-acad-87d72b3afbb8" class=""><strong><mark class="highlight-gray"><em>The Upskill Dojo</em></mark></strong><mark class="highlight-gray"><em>, Toronto, Canada – (Sept 2020 - Present)</em></mark></p><p id="4e8eaccc-38fc-48ff-9892-fdcd33703583" class="">Worked alongside co-founder in the ideation phase to create a startup focused on creating a revolutionary education platform to help students bridge the gap between technology and business. Currently working on development of our website and Minimum Viable Product for potential high school and university students. </p><h2 id="14740cc9-4482-425b-9e82-97347cc43442" class="">Chief Technology Officer</h2><p id="5bc6eb7a-8ef4-47cc-b2a2-1bf9d52ba58f" class=""><mark class="highlight-gray"><strong><em>Junior Economic Club of Toronto</em></strong></mark><mark class="highlight-gray"><em>, Toronto, Canada – (July 2020 - Present)</em></mark></p><p id="7b5dca4a-74ef-43f8-bcdc-fad0556ab9c1" class="">Lead and managed the recruitment of three website developers to work on our organization website which brings in over 7000 vistors annually, leading to hundreds of signs up to events, including our recent JEC International Fall Forum which attracted over 200 attendees in 90 different schools, 18 cities and 4 countries. Moderated numerous breakout rooms of 10 attendees and assisted in the planning and execution of the JEC International Fall Forum. </p><p id="32e6b56b-39ad-4c5f-b77f-4a59ce5b5054" class=""><mark class="highlight-gray"><strong><em>Website Developer</em></strong></mark><mark class="highlight-gray"><em>, Toronto, Canada – (July 2019 - June 2020)</em></mark></p><p id="34f6dbd6-df9f-4e04-95e8-554da986e4c9" class="">Previously developed website in a team of two to increase page views by 14%, and increase newsletter subscribers by 25%; assisted with the launch of the Junior Economist Medium Publication to over 500 viewers annually. </p><h2 id="97c02ade-2641-441a-9329-7ba36b3b15b7" class="">Website Coordinator </h2><p id="de9122b5-8e14-4533-8ac5-b3d85890d979" class=""><strong><mark class="highlight-gray"><em>TOHacks</em></mark></strong><mark class="highlight-gray"><em>, Toronto, Canada – (July 2020 - Present)</em></mark></p><p id="ad0e8069-93c2-4b9f-a39c-b433331f8721" class="">Assisted in the maintance and development of the TOHacks website, including the Team page, Past Hackathons page, and more; Assisted in Google AdWords campaign development, resulting in over 2500 impressions and 150 clicks. Iterated on the website and prepared for the launch of The Great AR/VR Challenge.</p><p id="4f7f6758-097f-4f00-b3cd-64d2b0a0e126" class="">Moderated several workshops with over 100+ attendees and assisted in the execution of the TOHacks x echoAR &quot;The Great AR/VR Challenge.&quot;</p><h2 id="2352c652-0b0e-4832-9042-c8d4c8da3d74" class="">Founder</h2><p id="e969be37-9269-4883-81e6-8f5988d0414e" class=""><strong><mark class="highlight-gray"><em>Now Speak Up</em></mark></strong><mark class="highlight-gray"><em>, Toronto, Canada – (June 2020 - Present)</em></mark></p><p id="ed553fd9-55d2-4883-b10e-f30eec5a42f6" class="">Lead in the recruitment of over 10 student volunteers for a startup focused on helping motivated students find their voice and practice their public speaking skills to 10x their growth and self development. Lead the development of the website and delegated tasks to prepare for free program launch in Q1 2020.</p><h2 id="5dc01411-7cb3-4967-95e6-94a473ea5652" class="">Media and Technologies Lead</h2><p id="fd3fbd31-d39a-4e8a-a661-e30cc96cfb70" class=""><strong><mark class="highlight-gray"><em>Agincourt CI &amp; Agincourt Music Council</em></mark></strong><mark class="highlight-gray"><em>, Toronto, Canada – (Sept. 2019 - Present)</em></mark></p><p id="82b815b3-d0c9-4f80-9e51-6fd710ca93ff" class="">Directed the departmental music video viewed by over 200 music students and multiple faculty members (2019), assisted in the planning of the 3-day Junior Music Retreat for over 200 Grade 9 and 10 students. Photographed and recorded concerts and events (Dec. 2020). Created a AMC Pass It On Video to be viewed nearly 600 times; lead the execution of a staff video production to be viewed over 1300 times by members of the Agincourt Community during the pandemic (May 2020).</p><p id="5ad4d3d8-ec49-44de-b7b9-ef3b679fe06e" class=""><strong><mark class="highlight-gray"><em>Grade 9 Music Representative</em></mark></strong><mark class="highlight-gray"><em>, Toronto, Canada – (Sept. 2018 - Aug. 2019)</em></mark></p><p id="858d6aec-a4aa-477c-9b6f-aae3fd98912a" class="">Advocated for over 300 Grade 9 music students and voiced their concerns in weekly executive council meetings, and assisted in all departmental activities and initiatives.</p><h1 id="f79d0a6f-cff8-42ca-a51e-10e42c371733" class="">🎯 Projects</h1><h2 id="594270f4-8bff-4fc3-9c2c-266195342fe4" class="">Kevin Liu</h2><p id="a5a8ee65-5109-4a26-8574-0f0c1937facf" class=""><strong><mark class="highlight-gray"><em>Youtube Channel</em></mark></strong><mark class="highlight-gray"><em>, June 2020 - Present; </em></mark><a href="https://www.youtube.com/channel/UCZCFIJ3qaeorDw4dwD9WEGA?view_as=subscriber"><mark class="highlight-gray"><em>Link</em></mark></a></p><p id="a191a614-ac66-44e2-98eb-7296b387acc9" class="">Created a Youtube Channel where I make videos on topics including by not limited to, technology, business, productivity, music, and more.</p><p id="85081f57-2fcc-4e3f-9cf1-34e019935504" class="block-color-gray"><em><strong>Medium</strong></em><mark class="highlight-gray"><em>, June 2020 - Present; </em></mark><a href="https://www.youtube.com/channel/UCZCFIJ3qaeorDw4dwD9WEGA?view_as=subscriber"><mark class="highlight-gray"><em>Link</em></mark></a></p><p id="d36ba50b-d0f5-41d4-aaf6-ebdbef54986b" class="">Create a Medium blog where I write articles on emerging technologies and a variety of topics.</p><h2 id="d4ecdf2e-230d-4f35-8e27-c05c76ed0e35" class="">Fortnight Mastery</h2><p id="b8403477-1446-450f-91b6-f99b004f906f" class=""><strong><mark class="highlight-gray"><em>Hackathon</em></mark></strong><mark class="highlight-gray"><em>, June 2020; fortnightmastery.space</em></mark></p><p id="3ed42884-34ff-4e86-86f8-66db402dae38" class="">Create as a project to help individuals stuck at home during the pandemic access quality online education to improve their skills in different streams including but not limited to programming, graphic design, content creation, art, entrepreneurship and more. </p><h2 id="2a04b5e8-6e42-497f-9985-ada348c17390" class="">XOPiano</h2><p id="a3b6acbb-493e-43b1-9a74-b9aabd83b49d" class=""><strong><mark class="highlight-gray"><em>Startup</em></mark></strong><mark class="highlight-gray"><em>, January 2019; www.xopiano.com</em></mark></p><p id="9f0b8b33-a640-4bcf-ade1-de5eda9265bd" class="">Create an online piano education platform as a learning experience; used Wordpress, HTML/CSS, and Javascript; implemented feedback from the target audience and reiterated</p><h1 id="f964a1b3-3df9-49f8-bdcb-4574c8884eba" class="">🏆 Awards</h1><p id="54ccc278-81df-4b60-8562-5501bd9a0d0e" class=""><strong>DefHacks Virtual 2020 | Participant</strong></p><p id="724abf72-2c7a-4911-a277-b2954b27def8" class=""><strong>Hack The Hammer | Participant</strong></p><p id="3d012752-42e3-4f04-ba7d-00507791b3c4" class=""><strong>Illuminate Universe</strong></p><ul id="4a5905df-2ccb-4083-8cf7-a8733dd07401" class="bulleted-list"><li>National High School Business Conference Finalist: Top 10 Teams</li></ul><ul id="e990dd12-5d6a-4e26-b593-5954d1520f8b" class="bulleted-list"><li>National High School Leadership Conference Finalist: &quot;Consultant Role&quot;</li></ul><h1 id="9e7975f6-3713-47e9-b364-32023dc7331c" class="">📜 Certifications</h1><p id="116dc3c9-f542-438f-aa4f-9aa1c1bd5d94" class=""><strong>Responsive Web Design Developer Certification</strong></p><p id="57688e15-6d7d-4d8c-91a5-b4d48ae6b1b1" class="block-color-gray"><strong><em>freeCodeCamp</em></strong><em>, May 2020; </em><a href="https://www.freecodecamp.org/certification/kevin_liu_tech/responsive-web-design"><em>See Credential</em></a></p><hr id="bf4b48d7-cb0d-4bbd-873a-971214e8f5b0"/><p id="70d2f58b-991a-4bd2-bb8f-c4d106f5670b" class=""><strong>The Fundamentals of Digital Marketing</strong></p><p id="9c75df4f-ec1e-418d-a4e5-e43de32154cf" class="block-color-gray"><strong><em>Google, </em></strong><em>Dec. 2019; Credential ID: 9D7F388YS; </em><a href="https://learndigital.withgoogle.com/digitalgarage/validate-certificate-code"><em>See Credential</em></a><em> </em></p><hr id="e390140b-1c43-46fc-8141-c04fb9db1e50"/><p id="77086a15-08f3-4939-9798-ad159d9fbe51" class=""><strong>Entrepreneurship 101</strong></p><p id="5bd93059-cd9f-41e2-93d4-2e8db2b5c397" class="block-color-gray"><strong><em>MaRS Discovery District; </em></strong><em>Apr. 2019, Credential ID: 12888640; </em><a href="https://www.credential.net/def0a148-f995-47bc-b0c8-2d56f80688c0#gs.icjs8l"><em>See Credential</em></a></p><hr id="ba25b707-4350-4a72-a180-dd16a954840d"/><p id="855b7918-f6ea-4c87-9f88-5aff4400e670" class=""><strong>Become A SuperLearner 2: Learn Speed Reading and Boost Memory</strong></p><p id="213c0186-ef96-447a-891d-5e28f0c252cc" class="block-color-gray"><em><strong>Jonathan Levi (Udemy); </strong></em><em>Jan. 2020; Credential ID: UC-1PS1Q14S; </em><em><a href="https://www.udemy.com/certificate/UC-1PS1Q14S/">See Credential</a></em></p><hr id="0d7dbb49-8f69-4ea1-bc3e-61fae6c0caac"/><p id="192a4345-0718-4ead-a96b-53eda0b27217" class=""><strong>Introduction to Psychology</strong></p><p id="ce17b654-a0cd-4734-b536-337c2dcb0f82" class="block-color-gray"><em><strong>Yale University</strong></em><em>; Mar. 2020; Credential ID: JCR2A7N7SBDM; </em><em><a href="https://www.coursera.org/account/accomplishments/certificate/JCR2A7N7SBDM">See Credential</a></em></p><hr id="ca0687c1-2321-4771-9b2b-73e5c37ee45f"/><p id="09d6ad6e-5724-4527-9cc4-5e7e3878548c" class=""><strong>Learning How to Learn: Powerful mental tools to help you master tough subjects</strong></p><p id="8c333389-353d-4540-b5dd-607fc88509de" class="block-color-gray"><strong><em>McMaster University</em></strong><em>; Aug. 2019; Credential ID: X6LM37J6XZGE; </em><a href="https://www.coursera.org/account/accomplishments/certificate/X6LM37J6XZGE"><em>See Credential</em></a></p><hr id="05cc375d-a13b-49d4-b6bf-f581268116cf"/><p id="15f8ddfd-6455-4546-9e56-41ae3be3f918" class=""><strong>Bronze Cross, Standard First Aid (CPR-C), Wading Pool Attendant</strong></p><p id="c12e5e29-c27b-4ff1-a246-cd93515c26c0" class="block-color-gray"><strong><em>Lifesaving Society of Ontario</em></strong><em>; Dec. 2019, &amp; Dec. 2018 (respectively); LSS ID: LIKT7P</em></p><hr id="a3c4e7e5-d7cc-42bb-a9d2-5115fab683ab"/><p id="f873da76-6267-4024-9072-51ed49537d83" class=""><strong>3D Printing Certification - Agincourt Branch</strong></p><p id="28f09163-36f6-4bf6-8599-a30088e9dd4b" class="block-color-gray"><em><strong>Toronto Public Library; </strong></em><em>Aug 2019</em></p><p id="48ffbeb2-ee52-49e7-8182-436d88dfcb7a" class="">
+</p></div></article></body></html>
