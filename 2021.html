@@ -1,0 +1,636 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Kevin&#x27;s 2021 Year.</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f84cb9ed-0e0f-4a03-9fff-bc4dcaab340e" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🌿</span></div><h1 class="page-title">Kevin&#x27;s 2021 Year.</h1></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="7c395e7e-ff8f-4039-82fd-4342b07c18f8"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong>Objective: Set meaningful and highly values goals for 2021 that help me achieve greater purposes that align in life. Inspired by @ </strong><a href="https://sigilwen.com/2021"><strong>Sigil Wen</strong></a><strong>!
+
+</strong>Current focuses of the year are exponentially growing my skillsets and knowledge base, expanding my frameworks and mental models for life, meeting awesome interesting people, and achieving financial freedom. By the way, I want to be happy and enjoy the journey while I&#x27;m at it.
+
+You may be asking, why I&#x27;m sharing this? To which I say, great question. My intention lies in public accountability and a greater drive towards the bias towards action. By publically sharing my goals, all the stakes are on the line.</div></figure><blockquote id="328a22a9-fc98-4cd4-9c49-6efdcca9c8ad" class=""><strong>&quot;A dream written down with a date becomes a goal. A goal broken down into steps becomes a plan. A plan backed by action makes your dreams reality&quot; — Greg S. Reid</strong></blockquote><h2 id="cf1cf635-de7d-4837-86d1-6914237d6b56" class="">Main Projects</h2><ul id="9b146c20-2e73-4a89-87e0-70d29085e887" class="toggle"><li><details open=""><summary><strong>Grow My Youtube Channel to at least 10k subscribers and impact 100k people through my videos. (0.35%)</strong></summary><p id="3bbbe992-748d-4a41-b05a-1c6ef69e9050" class=""><strong>Stats as of January 20th. 2020: </strong>35 subscribers, 949 views</p></details></li></ul><ul id="a350ceb9-5daf-4cad-b1d6-c184c4356688" class="toggle"><li><details open=""><summary><strong>Grow the Better Life Project and Mental Models for Successful People to at least 20k subscribers, and impact 1 million people through videos and pocast (16.75%)</strong></summary><p id="3bff5ed7-0ed3-4e1e-8222-c0e58a324f99" class="">Stats as of January 20th, 2021: 3.35K subscribers, 219,795 views</p></details></li></ul><ul id="9e57886e-8d77-403d-a88d-f77ae61c9dde" class="toggle"><li><details open=""><summary><strong>Reach $2000 in Passive Income a month by December 2021 (0.0005%)</strong></summary><p id="4ff405cc-1ef1-4a16-a6c4-d7effdb08720" class="">Working on getting there through either businesses, Patreon, Youtube, etc. </p><p id="07d75d61-b992-4b53-80df-8f1a2a2cc1d7" class="">Feel free to reach out to chat about this too!</p></details></li></ul><ul id="e5d1be39-5c10-41a4-8054-1d55479adcb6" class="toggle"><li><details open=""><summary><strong>Meet and Talk with 150 Successful and Interesting People (4/150)</strong></summary><ol id="f1a2faa1-775e-4203-ba2a-4f98c08af59b" class="numbered-list" start="1"><li><strong>Troy Crema:</strong> Super motivated dude, currently working on 2 startups, Greencube and Greeta, and a killer entrepreneur</li></ol><ol id="efa2fcec-7fe7-4a0a-86f0-6c9ae05f251c" class="numbered-list" start="2"><li><strong>Linus Lee: </strong>We only talked once, but that was an absolutely insane coffee chat. Provided so much value and had super dope thoughts. Let&#x27;s meet again soon!</li></ol><ol id="5b923d27-7e52-4be5-8747-d9baf687d384" class="numbered-list" start="3"><li><strong>Harrison Nolan: </strong>One of two legendary TKS Directors for the Innovate program. Been instrumental towards my growth and helping provide the guidance to help me grow exponentially.</li></ol><ol id="4a37bc8b-dbf9-486f-9d08-9ef9d20d0f7b" class="numbered-list" start="4"><li><strong>Kim Parnell: </strong>One of two legendary TKS Directors for the Innovate program. ALSO been instrumental towards my growth and helping provide the guidance to help me grow exponentially.</li></ol><ul id="db3cf18e-c289-4837-812e-8c8fd7a3cb50" class="toggle"><li><details open=""><summary>Students</summary><p id="21030c70-c249-463f-a0a3-ddf7904ba0b5" class="">Literally almost all of TKS peeps. If I counted you all, then I&#x27;d literally be at 150. Nonetheless, huge shoutout goes to the following people, like they actually be awesome jheez:</p><ul id="a729bed0-5d1f-4623-b7a6-edb3699b9e89" class="bulleted-list"><li>Michael Ye: Fellow productivity enthusiast. Literally a legend. Check him out. Period.</li></ul><ul id="50f3b93d-4126-4ead-b0f5-92498c466cfe" class="bulleted-list"><li>Sigil Wen: He&#x27;s crushin it as well, currently working on big stuff too!</li></ul><ul id="c25eefda-e26a-477a-841e-d9fd75d23acf" class="bulleted-list"><li>Om Agarwal: So lucky to have met him. Been on huge stages, working on huge startups too.</li></ul><ul id="b4ea6977-dcda-4162-965d-c87c05993d34" class="bulleted-list"><li>Sri Anu: Fellow innovate that&#x27;s crushing it. What a legend.</li></ul><ul id="d099f210-5561-424f-bf3f-578d2c98f6eb" class="bulleted-list"><li>Prasheel Vellanki: Huge shoutout to him for helping with the Instacart Challenge. We crushed it and we couldn&#x27;t have done it without him.</li></ul><ul id="fc393184-d574-45ed-9703-9cd052e1b88b" class="bulleted-list"><li>Nyla Pirani: Cool activate that&#x27;s working on accelerating their growth exponentially as well.</li></ul><ul id="4c54689e-5449-48a7-8f40-c806c0f435b4" class="bulleted-list"><li>Adara Hagman: Super dope, and working on climate centric projects! Super excited to work on the Climate Action Challenge in March!</li></ul><ul id="c1ae4d5f-5495-447f-b2a8-5b100000a56c" class="bulleted-list"><li>Evan Lin: Man like Evan? Top tier legend. </li></ul></details></li></ul></details></li></ul><ul id="39a272c2-b920-49ff-a1a3-8e0d2750dacd" class="toggle"><li><details open=""><summary><strong>Create a technical portfolio project a month (1/12)</strong></summary><p id="13fe5a22-b53c-43a4-93e9-0a72f425b868" class="">January: Breast Cancer Detection with Machine Learning</p></details></li></ul><ul id="25c26f1e-5bbf-4524-ba14-a5fcfdba00bd" class="toggle"><li><details open=""><summary><strong>Complete three TKS Focuses (0.5/3)</strong></summary><p id="e1a43188-adaf-409d-8069-74f8570c19ff" class="">As of January 20th, 2021:</p><ul id="2a396135-31cc-460a-b3b1-28b658c68972" class="bulleted-list"><li>Artificial Intelligence Focus: 50% completed</li></ul><ul id="520f58ce-dfc4-41a7-aa44-7973bab94511" class="bulleted-list"><li>Longevity Focus: Interested</li></ul><ul id="824548d0-0b25-4bc5-9725-4e657b257d52" class="bulleted-list"><li>Self Driving Cars: Interested</li></ul></details></li></ul><ul id="87d3e808-2333-48fb-9cc5-f7f35328804a" class="toggle"><li><details open=""><summary><strong>Launch a product a month (1/12)</strong></summary><p id="56d957af-6e3c-4767-b109-c6143d6f90b3" class=""><strong>January: </strong><a href="http://theupskilldojo.org"><strong>The Upskill Dojo</strong></a></p></details></li></ul><ul id="e64f1580-59ed-48a9-b037-6a9ffbc38977" class="toggle"><li><details open=""><summary><strong>Three Youtube Videos a Month (1/36)</strong></summary><p id="c54a561d-3ea6-4fcd-b941-27e68799df2c" class=""><strong>January:</strong> </p><ul id="ab8ad312-f543-4f44-8623-6d5af702a320" class="bulleted-list"><li><a href="https://www.youtube.com/watch?v=CLG8dh2jAdc">How I Built A Breast Cancer Detection ML Model</a></li></ul><ul id="27f4c272-73e9-4f36-bbb1-684a0afa85b0" class="bulleted-list"><li>Currently in the works</li></ul></details></li></ul><ul id="1d0bebf0-b275-4d3b-99a5-91823a0ac2ea" class="toggle"><li><details open=""><summary><strong>Two Podcast Episodes a Month (0/26)</strong></summary><p id="36354ffd-698d-49b0-977c-8a4b8cf976d4" class="">With interesting people of course....
+January:</p></details></li></ul><ul id="4678ca90-6fd6-43ef-b8cc-79e8adb8095c" class="toggle"><li><details open=""><summary><strong>One Article a Week (2/52)</strong></summary><p id="cab862b8-3bb3-4283-b1d5-55883e26b2a2" class=""><strong>January:</strong></p><ul id="f5be199c-215a-46b2-bc58-8727034a77df" class="bulleted-list"><li><a href="https://kevin-liu.medium.com/why-stoicism-will-help-you-live-a-better-life-f8c2f6a42415?sk=be83a72fae8fb36f5620a00417c5d805">Why Stoicism Will Help You Live a Better Life</a></li></ul><ul id="13a07886-92ed-4e4c-b12e-0ccd2a6b8579" class="bulleted-list"><li><a href="https://kevin-liu.medium.com/breast-cancer-detection-with-machine-learning-the-future-of-healthcare-34d45dea3778">How I Built a Breast Cancer Detection Model Full Breakdown</a></li></ul></details></li></ul><h2 id="a075fb2f-f0e0-4e03-8a50-d87d2ac58bb3" class="">Key Skill Goals</h2><p id="5d0f6f3b-8e76-43e1-863d-9ed868c6ea6f" class=""><em>Goes hand in hand with the project. More time spent working on these projects, the better I&#x27;ll probably become in the follow skillsets.</em></p><ul id="e36585d1-c6a3-4750-9943-5404b0454280" class="toggle"><li><details open=""><summary><strong>Become a master at Full-Stack Development</strong><em> (by building a product </em><em><strong>&amp;</strong></em><em> project a month)</em></summary><p id="11c495f8-c2d6-4a90-bf72-d770b9073f4f" class="">Working on the following languages and stacks:</p><ul id="22c103e0-a033-47be-98dd-577b9f465f50" class="bulleted-list"><li>HTML/CSS, Javascript, React, Node, Express, PHP/SQL, Django, Mongo.DB</li></ul><ul id="521a7cc8-545c-4a8a-99bf-66c359431b64" class="bulleted-list"><li>Deployment tools: Heroku, AWS, GCloud, VMware, Git, FTP Clients, Putty, XAMPP, phpMyAdmin, Processing, X-CTU, MS Access, Anaconda, MATLAB, Visual Studio</li></ul></details></li></ul><ul id="652d2383-c5d3-4463-84a7-5108b29e64d5" class="toggle"><li><details open=""><summary><strong>Mastered ONE programing language</strong> <em>(by building a product </em><em><strong>&amp;</strong></em><em> project a month)</em></summary><ul id="8c416965-ee25-4ad1-88f4-908bf279040c" class="bulleted-list"><li>Deeper Knowledge in Python, and Applied AI/ML with Tensorflow, Theano, PyTorch, SciKit-Learn, XGBoost+LightGBM+CatBoost, Eli5, SciPy, OpenCV, Keras, NLTK, Stanford NLP, SpaCy, Gensim, GloVe, NumPy, Pandas, Matplotlib, Seaborn, Plotly, Bokeh, Pydot, BeautifulSoup, Selenium, Scrapy, Tkinter, PyQt, Django, Flask</li></ul></details></li></ul><ul id="013887be-ba4f-4540-98f7-c40be90ea23a" class="toggle"><li><details open=""><summary><strong>Master the full Adobe Creative Suite</strong> <em>(by using it throughout these main projects and daily life)</em></summary><p id="53372a1f-8a51-4bde-92df-271be4275173" class="">Photoshop, Lightroom, Illustrator, InDesign, Premiere Pro, After Effects, XD, Spark, Animate, Dreamweaver, Dimension, Audition, InCopy, Aera, Fresco, Character Animator, Media Encoder, Capture</p><p id="9cde6ea6-2798-4eed-96db-49d5e686cc6d" class="">
+</p></details></li></ul><h2 id="0e7babe6-c087-4516-91a6-0826043b2eb0" class="">Indirect Goals</h2><p id="045f2423-3fb4-4c23-aa57-f2ce9aab27f6" class=""><em>These are goals that aren&#x27;t going to receive too much love and attention, but hopefully will come as a byproduct of my key project and skill goals.</em></p><ul id="fbc7e3f3-b6d6-421f-b563-77c6c66d10e2" class="toggle"><li><details open=""><summary>Leverage social media to build a community and following, i.e. Blowing up on Instagram &amp; Tiktok with 1m likes</summary></details></li></ul><ul id="350532d0-df50-4773-addb-b4dc3745bc43" class="toggle"><li><details open=""><summary>Raise $10,000 (either through fundraising or personal contribution) to impact a specific UN SDG or create a incubator fellowship fund for other change makers and future leaders</summary></details></li></ul><ul id="a24a9b89-5409-465e-a7d4-8393cd146075" class="toggle"><li><details open=""><summary>Land another internship at a company that will help me exponentially grow and apply my skills while driving value for the company</summary><p id="93f2efd2-c238-4bfb-a008-3a078d916d03" class="">An internship at a startup or fast-growing company and leverage that to expedite my personal growth and drive value to the organization. Current eyes set on <strong>Monthly, CIBC, RBC, Deloitte, Sickkids, OpenAI, etc.</strong></p></details></li></ul><ul id="87c54ec1-1ea3-430c-9691-0cf7c6a5764b" class="toggle"><li><details open=""><summary>Reach 1k on Twitter</summary></details></li></ul><h2 id="f1a7c6fa-efd1-4275-9b5a-e4c2f09d89fa" class="">Lifestyle and Hobby Goals</h2><ul id="287f2657-1865-4f6f-8276-4f472f622e9c" class="toggle"><li><details open=""><summary><strong>Read 50 valuable books to grow breadth of knowledge to apply and execute on (1/50)</strong></summary><p id="f803a38a-9b6e-464f-a839-2b623cb6891d" class="">Create summaries and analysis on 10</p></details></li></ul><ul id="2e8106b5-5534-42e8-9404-d8fa5e33cd52" class="toggle"><li><details open=""><summary><strong>Become the fittest person among peeps I know. (credit to Brent Fikowski)</strong></summary><p id="4cd74dd8-7fef-4419-8ade-9deaf915a09b" class="">If you know, you know.</p></details></li></ul><ul id="5c5d9e21-af21-4a69-ac0c-5d3c44c02db8" class="toggle"><li><details open=""><summary><strong>Act on the Importance of S.E.E.</strong></summary><ul id="7ea8252c-a619-4de2-92f4-378c73fd65c8" class="bulleted-list"><li>Sleeping 8 hours a day</li></ul><ul id="93f2acb2-004c-4975-85ad-0ae5f33bc087" class="bulleted-list"><li>Exercising at least 15 minutes a day</li></ul><ul id="565849a9-5b4e-4f5b-b8aa-4037761c8996" class="bulleted-list"><li>Eating 3 HEALTHY meals with snacks</li></ul><ul id="3d83c877-59af-45c2-8672-44a9bb968836" class="bulleted-list"><li>Possible 6-pack by July ;)</li></ul></details></li></ul><ul id="9ce1eab2-ce0a-47b5-9d44-92bd525f26a5" class="toggle"><li><details open=""><summary><strong>Listen to 5 podcasts a week</strong></summary><p id="1203102e-fca5-4dee-9c2d-39dfb8f60fb3" class="">Ongoing! </p></details></li></ul><ul id="0c7e8f2e-39a2-4fea-86ce-505f72038541" class="toggle"><li><details open=""><summary><strong>Finish Level 10 Piano RCM in May</strong></summary><p id="69d6f9b4-b100-46a8-a25e-ea00f23c9ced" class="">I geniunely enjoy piano, it just takes time to practice. I&#x27;ll start treating this as a way to relax at the end of the day, and substitute it for an existing bad habit.</p></details></li></ul><ul id="e3bff0b0-9177-4d22-974f-ed79c0513be3" class="toggle"><li><details open=""><summary><strong>Become a master cook.</strong></summary><p id="cbe7dd78-4f9f-4ea6-a225-098e59f7ac3e" class="">Parents have always been legendary at making delish food. Build your own arsenal of recipes and dishes that you can whip out ASAP. By the end of the year, learn from parents on how to make all of the dishes from our family restaurant Asian Fusion.</p><p id="9907bbf0-80cc-43b2-9b2b-1b9e37e60556" class=""><strong>Action Item:</strong> Develop a Chinese Cuisine Masterclass or Course by the end of 2021. </p></details></li></ul><ul id="362269d0-4060-4612-98c6-9b1ede7deb27" class="toggle"><li><details open=""><summary><strong>Be happy.</strong></summary><p id="36cc0b13-f303-4093-9c1a-127b2e635428" class="">2020 was one of my lowest points in life and with that came a bunch of struggles. Moving forward the goal is:</p><ul id="ce6a6800-f270-4f1a-9f98-68caa4466c42" class="bulleted-list"><li>Reducing negative emotions and self destructive behaviours</li></ul><ul id="05070164-c2ae-4b81-b4da-7d7929aeb7f4" class="bulleted-list"><li>For myself, stop using &quot;depressed&quot; as a way to describe my situation. Doesn&#x27;t matter what my diagnosis has been, I can take ownership of this.</li></ul><ul id="78a6b5b1-a6bc-4d05-84da-0c0c72fef787" class="bulleted-list"><li>Journal to let go of mental fog and increase clarity. Also allow yourself to ramble to Notion, literally my best friend.</li></ul><ul id="518eb5d2-f4c5-4903-8074-75eec69ca2ec" class="bulleted-list"><li>Incorporate mindfulness, meditation, and daily gratitude journals as part of your life.</li></ul></details></li></ul><h2 id="66dcd0fb-5509-4122-9529-cef4f6c4dede" class="">Personal Quotes, Mantras and Philosophies for 2021</h2><p id="d7c50442-970b-4dba-846b-b6d1078af21a" class="">Direct <strong>Attention, Time, </strong>and <strong>Energy </strong>to <strong>High Leverage </strong>pursuits aligned with my Foundational Values, and My Life Compasses. Learn. Grow. Love. Impact. Create Wealth.</p><ul id="efc76209-4b60-4c78-99d3-9b33e0dc37ec" class="bulleted-list"><li>If you&#x27;re not doing something, it&#x27;s not because you don&#x27;t have time, but it&#x27;s because you&#x27;re not making it a priority.</li></ul><ul id="8c40d9e3-a565-4d45-8eee-a488078035a0" class="bulleted-list"><li>Stop having reactions to avoid unhelpful emotions amid events that happen in your life. Apply stoicism because why spend any time being unhappy, or angry. Change the outlook on life and literally just be happy. (Controversial, but we can talk about this in a call if you&#x27;d like)</li></ul><ul id="9044a34a-194e-46f4-8990-d2b8f2c4f8fb" class="bulleted-list"><li>Demonstrate Bias Towards Action in every part of your life, meaning be impatient with action, and be patient with the results that you drive. (Well articulated by a friend <a href="https://sigilwen.com/186f85b9c5fd4e01af797f6afe889d1e">Sigil</a>)</li></ul><ul id="a67c2071-cdd1-4840-a5f6-9571d01873c3" class="bulleted-list"><li>Stop being the victim. Focus on what you can control instead of blaming others or other external events. Take extreme ownership.</li></ul><ul id="86e49981-09f8-4b3a-a192-a95c942afefa" class="bulleted-list"><li>The first wealth is health. — from Ralph Waldo Emerson</li></ul><h2 id="191d2892-8c76-480d-96ac-225403f3ca3d" class="">Habits</h2><ul id="22272638-ec0f-42c2-b6a4-d86a28c7d5bf" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Read <em>daily</em></span></li></ul><ul id="60c0a134-0981-4b63-95c1-0b745bf822ab" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Eat properly</span></li></ul><ul id="30ade765-3cd4-47a0-bb2f-94d24df23ccf" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Sleep properly</span></li></ul><ul id="cab69b4c-a61d-4980-8fb8-5b19c0efd88b" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Make my bed</span></li></ul><ul id="009f7153-1e1d-4684-8007-ca10378d1a45" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Exercise and Yoga</span></li></ul><ul id="c3048cb5-5cec-4066-a082-ca70a2e79d74" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Listen to podcasts <em>daily</em></span></li></ul><ul id="cb942b17-4944-4930-934a-77bc70e7a4a7" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Meditation, Gratitude and Journaling</span></li></ul><blockquote id="3cdd002e-5e96-4dc9-a301-f2129d73ce83" class="">If you&#x27;re interested in creating your own master path and execute on it, then it&#x27;s time to check out <a href="http://theupskilldojo.org">The Upskill Dojo</a>, an free 5-month incubator mastermind I&#x27;ve created for fellow ambitious individuals who want to achieve their goals. 
+
+Deadline to apply is January 31st, 2021. Learn more by clicking <a href="http://theupskilldojo.org">here</a>! </blockquote><p id="4ce7f840-2d40-4513-8b3c-2549f5878563" class="">
+</p></div></article></body></html>
